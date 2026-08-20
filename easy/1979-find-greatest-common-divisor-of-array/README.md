@@ -49,20 +49,19 @@ Constraints:
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.3 MB  
-**Submitted:** 2026-08-20T17:46:27.546Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 16.2 MB (beats 70.68%)  
+**Submitted:** 2026-08-20T17:46:34.141Z  
 
 ```cpp
-class Solution {
+class Solution {
 public:
-    int findGCD(vector<int>& nums) {
-        int min_val = *min_element(nums.begin(), nums.end());
-        int max_val = *max_element(nums.begin(), nums.end());
-        return gcd(min_val, max_val);
-    }
+    int findGCD(vector<int>& nums) {
+        int min_val = *min_element(nums.begin(), nums.end());
+        int max_val = *max_element(nums.begin(), nums.end());
+        return gcd(min_val, max_val);
+    }
 };
-
 ```
 
 ---
