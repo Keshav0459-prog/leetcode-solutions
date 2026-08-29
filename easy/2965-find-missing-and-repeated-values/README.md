@@ -36,28 +36,40 @@ Constraints:
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.3 MB  
-**Submitted:** 2026-08-29T14:43:12.900Z  
+**Runtime:** 3 ms (beats 64.92%)  
+**Memory:** 26.5 MB (beats 80.09%)  
+**Submitted:** 2026-08-29T14:43:45.886Z  
 
 ```cpp
 class Solution {
 public:
-    int majorityElement(vector<int>& nums) {
-        int a=0;
-        int count=0;
-        for(int num: nums){
-            if(count ==0){
-                a = num;
-            }
-            if(num == a){
-                count ++;
-            }
-            else {
-                count --;
+    vector<int> findMissingAndRepeatedValues(vector<vector<int>>& grid) {
+        int n = grid.size();
+        int totalElements = n * n;
+        
+        
+        vector<int> count(totalElements + 1, 0);
+        
+        
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                count[grid[i][j]]++;
             }
         }
-        return a;
+        
+        int repeated = -1;
+        int missing = -1;
+        
+        
+        for (int i = 1; i <= totalElements; i++) {
+            if (count[i] == 2) {
+                repeated = i;
+            } else if (count[i] == 0) {
+                missing = i;
+            }
+        }
+        
+        return {repeated, missing};
     }
 };
 ```
