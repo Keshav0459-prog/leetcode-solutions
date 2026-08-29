@@ -43,8 +43,8 @@ Follow up: If you have figured out the O(n) solution, try coding another solutio
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 8.2 MB  
-**Submitted:** 2026-08-29T14:37:22.351Z  
+**Memory:** 8.3 MB  
+**Submitted:** 2026-08-29T14:38:28.761Z  
 
 ```cpp
 class Solution {
@@ -54,12 +54,12 @@ public:
        for(int val: nums){
         currSum += val;
         maxSum = max(currSum, maxSum);
-       }
-        if(currSum == 0){
+        if(currSum < 0){
             currSum = 0;
         }
-    }
+       }
        return maxSum;
+    }
 };
 
 ```
