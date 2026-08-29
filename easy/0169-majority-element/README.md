@@ -32,17 +32,26 @@ Follow-up: Could you solve the problem in linear time and in O(1) space?
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.1 MB  
-**Submitted:** 2026-08-29T14:22:12.399Z  
+**Runtime:** 3 ms (beats 28.71%)  
+**Memory:** 28 MB (beats 99.88%)  
+**Submitted:** 2026-08-29T14:22:18.966Z  
 
 ```cpp
 class Solution {
 public:
-    int singleNumber(vector<int>& nums) {
-        int a = 0;
-        for(int b : nums){
-            a ^= b;
+    int majorityElement(vector<int>& nums) {
+        int a=0;
+        int count=0;
+        for(int num: nums){
+            if(count ==0){
+                a = num;
+            }
+            if(num == a){
+                count ++;
+            }
+            else {
+                count --;
+            }
         }
         return a;
     }
