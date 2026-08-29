@@ -44,9 +44,9 @@ Constraints:
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.3 MB  
-**Submitted:** 2026-08-29T14:06:44.050Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 20.6 MB (beats 83.86%)  
+**Submitted:** 2026-08-29T14:06:49.456Z  
 
 ```cpp
 class Solution {
@@ -54,7 +54,7 @@ public:
     int singleNumber(vector<int>& nums) {
         int a = 0;
         for(int b : nums){
-            a = a ^ b;
+            a ^= b;
         }
         return a;
     }
