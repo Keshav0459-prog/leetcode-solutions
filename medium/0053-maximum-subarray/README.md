@@ -42,26 +42,25 @@ Follow up: If you have figured out the O(n) solution, try coding another solutio
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.3 MB  
-**Submitted:** 2026-08-29T14:38:28.761Z  
+**Runtime:** 1 ms (beats 25.21%)  
+**Memory:** 71.8 MB (beats 14.81%)  
+**Submitted:** 2026-08-29T14:38:35.379Z  
 
 ```cpp
-class Solution {
+class Solution {
 public:
-    int maxSubArray(vector<int>& nums) {
-       int currSum =0; int maxSum= INT_MIN;
-       for(int val: nums){
-        currSum += val;
-        maxSum = max(currSum, maxSum);
-        if(currSum < 0){
-            currSum = 0;
-        }
-       }
-       return maxSum;
-    }
+    int maxSubArray(vector<int>& nums) {
+       int currSum =0; int maxSum= INT_MIN;
+       for(int val: nums){
+        currSum += val;
+        maxSum = max(currSum, maxSum);
+        if(currSum < 0){
+            currSum = 0;
+        }
+       }
+       return maxSum;
+    }
 };
-
 ```
 
 ---
