@@ -39,9 +39,9 @@ Follow up: Could you solve the problem in linear time and in O(1) space?
 ## Solution
 
 **Language:** C++  
-**Runtime:** 1624 ms (beats 5.12%)  
-**Memory:** 23.7 MB (beats 83.86%)  
-**Submitted:** 2026-08-31T04:14:06.346Z  
+**Runtime:** 0 ms  
+**Memory:** 8.3 MB  
+**Submitted:** 2026-08-31T04:23:01.622Z  
 
 ```cpp
 class Solution {
