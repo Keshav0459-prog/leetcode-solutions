@@ -39,27 +39,33 @@ Follow up: Could you solve the problem in linear time and in O(1) space?
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.2 MB  
-**Submitted:** 2026-08-31T04:13:56.460Z  
+**Runtime:** 1624 ms (beats 5.12%)  
+**Memory:** 23.7 MB (beats 83.86%)  
+**Submitted:** 2026-08-31T04:14:06.346Z  
 
 ```cpp
-                continue;
-            }
-            int freq = 0;
-            for(int el: nums){
-                if(val == el){
-                    freq++;
-                }
-            }
-        }
-            if(freq> n/3){
-                result.emplace_back(val);
-            }
-    }
-        return result;
+class Solution {
+public:
+    vector<int> majorityElement(vector<int>& nums) {
+        int n = nums.size();
+        vector<int> result;
+        for(int val : nums){
+            if(find(result.begin(), result.end(), val) != result.end()){
+                continue;
+            }
+            int freq = 0;
+            for(int el: nums){
+                if(val == el){
+                    freq++;
+                }
+            }
+            if(freq> n/3){
+                result.emplace_back(val);
+            }
+        }
+        return result;
+    }
 };
-
 ```
 
 ---
