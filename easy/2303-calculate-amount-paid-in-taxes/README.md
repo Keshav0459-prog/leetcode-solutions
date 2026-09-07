@@ -61,28 +61,31 @@ Constraints:
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.2 MB  
-**Submitted:** 2026-09-07T18:49:27.448Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 17.5 MB (beats 85.45%)  
+**Submitted:** 2026-09-07T18:49:57.156Z  
 
 ```cpp
-            int upper = b[0];
-            int percent = b[1];
-            int tax = min(income,upper) - pre;
-            if(tax > 0){
-                total += (tax * percent)/ 100.0;
-            }
-            pre = upper;
-        for(const auto& b : brackets){
-        int pre=0;
-        double total = 0.0;
-            if (income <= upper){
-                break;
-            }
-    double calculateTax(vector<vector<int>>& brackets, int income) {
+class Solution {
 public:
-class Solution {
-
+    double calculateTax(vector<vector<int>>& brackets, int income) {
+        double total = 0.0;
+        int pre=0;
+        for(const auto& b : brackets){
+            int upper = b[0];
+            int percent = b[1];
+            int tax = min(income,upper) - pre;
+            if(tax > 0){
+                total += (tax * percent)/ 100.0;
+            }
+            pre = upper;
+            if (income <= upper){
+                break;
+            }
+        } 
+        return total;
+    }
+};
 ```
 
 ---
