@@ -42,22 +42,21 @@ Follow up: Could you solve it without loops/recursion?
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 7.6 MB  
-**Submitted:** 2026-09-07T19:06:57.698Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 7.8 MB (beats 50.34%)  
+**Submitted:** 2026-09-07T19:07:26.754Z  
 
 ```cpp
-class Solution {
+class Solution {
 public:
-    bool isPowerOfTwo(int n) {
-        if((n>0) && ((n&(n-1))==0)){
-            return true;
-        }else{
-            return false;
-        }
-    }
+    bool isPowerOfTwo(int n) {
+        if((n>0) && ((n&(n-1))==0)){
+            return true;
+        }else{
+            return false;
+        }
+    }
 };
-
 ```
 
 ---
