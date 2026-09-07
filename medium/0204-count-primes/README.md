@@ -36,22 +36,27 @@ Constraints:
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 7.6 MB  
-**Submitted:** 2026-09-07T19:54:55.955Z  
+**Memory:** 7.8 MB  
+**Submitted:** 2026-09-07T20:00:05.507Z  
 
 ```cpp
-class Solution {
-public:
-    int countPrimes(int n) {
-        if(n<=1) return false;
-        for(int i=2; i*i <=n; i++){
-            if(n%i==0){
-                return false;
+        for (int i = 2; i < n; i++) {
+            if (prime[i]) {
+                count++; 
+                for (long long j = 1LL * i * i; j < n; j += i) {
+                    prime[j] = false;
+                }
             }
         }
+        
+        return count;
+        
     }
-        return true;
-};
+        
+        int count = 0;
+        vector<bool> prime(n, true);
+    int countPrimes(int n) {
+public:
 
 ```
 
