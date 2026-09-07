@@ -35,27 +35,26 @@ Constraints:
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 7.8 MB  
-**Submitted:** 2026-09-07T19:25:04.140Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 7.9 MB (beats 54.84%)  
+**Submitted:** 2026-09-07T19:25:10.836Z  
 
 ```cpp
-class Solution {
+class Solution {
 public:
-    int subtractProductAndSum(int n) {
-       int multiply = 1;
-       int add = 0;
-       
-       while(n>0){
-        int rem = n % 10;
-        multiply *= rem;
-        add+= rem;
-        n/=10;
-       }
-       return multiply - add; 
-    }
+    int subtractProductAndSum(int n) {
+       int multiply = 1;
+       int add = 0;
+       
+       while(n>0){
+        int rem = n % 10;
+        multiply *= rem;
+        add+= rem;
+        n/=10;
+       }
+       return multiply - add; 
+    }
 };
-
 ```
 
 ---
