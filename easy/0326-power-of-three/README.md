@@ -43,9 +43,9 @@ Follow up: Could you solve it without loops/recursion?
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 7.7 MB  
-**Submitted:** 2026-09-07T19:16:53.647Z  
+**Runtime:** 1 ms (beats 72.07%)  
+**Memory:** 9 MB (beats 43.12%)  
+**Submitted:** 2026-09-07T19:16:59.813Z  
 
 ```cpp
 class Solution {
@@ -57,7 +57,7 @@ public:
         while(n%3==0){
             n/=3;
         }
-        return true;
+        return n==1;
     }
 };
 ```
