@@ -34,10 +34,12 @@ Constraints:
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 8.3 MB  
-**Submitted:** 2026-09-07T18:41:24.190Z  
+**Memory:** 8.4 MB  
+**Submitted:** 2026-09-07T18:42:02.822Z  
 
 ```cpp
+                answer.push_back("FizzBuzz");
+            }
             else if(i%3==0){
                 answer.push_back("Fizz");
             }
@@ -46,10 +48,8 @@ Constraints:
             }
             else{
                 answer.push_back(to_string(i));
-            }
-                answer.push_back("FizzBuzz");
             if(i%3==0 && i%5==0){
-        for(int i=0; i<n; i++){
+        for(int i=1; i<=n; i++){
         vector<string> answer;
     vector<string> fizzBuzz(int n) {
 public:
