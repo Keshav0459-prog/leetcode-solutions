@@ -33,28 +33,32 @@ Constraints:
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.4 MB  
-**Submitted:** 2026-09-07T18:42:02.822Z  
+**Runtime:** 3 ms (beats 31.24%)  
+**Memory:** 11.9 MB (beats 18.07%)  
+**Submitted:** 2026-09-07T18:42:12.887Z  
 
 ```cpp
-                answer.push_back("FizzBuzz");
-            }
-            else if(i%3==0){
-                answer.push_back("Fizz");
-            }
-            else if(i%5==0){
-                answer.push_back("Buzz");
-            }
-            else{
-                answer.push_back(to_string(i));
-            if(i%3==0 && i%5==0){
-        for(int i=1; i<=n; i++){
-        vector<string> answer;
-    vector<string> fizzBuzz(int n) {
+class Solution {
 public:
-class Solution {
-
+    vector<string> fizzBuzz(int n) {
+        vector<string> answer;
+        for(int i=1; i<=n; i++){
+            if(i%3==0 && i%5==0){
+                answer.push_back("FizzBuzz");
+            }
+            else if(i%3==0){
+                answer.push_back("Fizz");
+            }
+            else if(i%5==0){
+                answer.push_back("Buzz");
+            }
+            else{
+                answer.push_back(to_string(i));
+            }
+        }
+        return answer;
+    }
+};
 ```
 
 ---
