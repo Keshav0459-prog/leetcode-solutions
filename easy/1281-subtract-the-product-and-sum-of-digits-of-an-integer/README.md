@@ -36,8 +36,8 @@ Constraints:
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 7.7 MB  
-**Submitted:** 2026-09-07T19:24:46.109Z  
+**Memory:** 7.8 MB  
+**Submitted:** 2026-09-07T19:25:04.140Z  
 
 ```cpp
 class Solution {
@@ -49,7 +49,7 @@ public:
        while(n>0){
         int rem = n % 10;
         multiply *= rem;
-        add+= add;
+        add+= rem;
         n/=10;
        }
        return multiply - add; 
