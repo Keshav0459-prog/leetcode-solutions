@@ -44,23 +44,22 @@ Follow up: Could you solve it without loops/recursion?
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 7.8 MB  
-**Submitted:** 2026-09-07T19:15:51.228Z  
+**Memory:** 7.7 MB  
+**Submitted:** 2026-09-07T19:16:53.647Z  
 
 ```cpp
-class Solution {
+class Solution {
 public:
-    bool isPowerOfThree(int n) {
-        if(n<=0){
-            return false;
-        }
-        while(n%3==0){
-            n/=3;
-        }
-    }
-        return true;
+    bool isPowerOfThree(int n) {
+        if(n<=0){
+            return false;
+        }
+        while(n%3==0){
+            n/=3;
+        }
+        return true;
+    }
 };
-
 ```
 
 ---
