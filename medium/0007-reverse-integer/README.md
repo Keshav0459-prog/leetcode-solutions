@@ -36,25 +36,24 @@ Constraints:
 ## Solution
 
 **Language:** C++  
-**Runtime:** 2 ms  
-**Memory:** 7.7 MB  
-**Submitted:** 2026-09-07T19:32:25.025Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 8.5 MB (beats 83.32%)  
+**Submitted:** 2026-09-07T19:32:30.275Z  
 
 ```cpp
 class Solution {
 public:
     int reverse(int x) {
-        int rev = 0;
+        long long rev = 0; 
         
         while (x != 0) {
-            int pop = x % 10;
+            rev = (rev * 10) + (x % 10);
             x /= 10;
-            
-            
-            if (rev > INT_MAX / 10 || (rev == INT_MAX / 10 && pop > 7)) return 0;
-            if (rev < INT_MIN / 10 || (rev == INT_MIN / 10 && pop < -8)) return 0;
-            
-            rev = (rev * 10) + pop;
+        }
+        
+        
+        if (rev > INT_MAX || rev < INT_MIN) {
+            return 0;
         }
         
         return rev;
