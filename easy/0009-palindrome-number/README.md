@@ -42,10 +42,11 @@ Follow up: Could you solve it without converting the integer to a string?
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 7.8 MB  
-**Submitted:** 2026-09-07T19:44:24.049Z  
+**Memory:** 8 MB  
+**Submitted:** 2026-09-07T19:47:16.986Z  
 
 ```cpp
+class Solution {
 public:
     bool isPalindrome(int x) {
         int reverse = 0;
@@ -53,10 +54,11 @@ public:
             int rem = x % 10;
             reverse = (reverse*10) + rem;
             x/=10;
-        } return reverse == x;
+        } return reverse == original;
     }
+        if(x<0) return false;
+        int original = x;
 };
-class Solution {
 
 ```
 
