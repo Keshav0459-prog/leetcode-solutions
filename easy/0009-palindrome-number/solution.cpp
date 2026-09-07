@@ -1,3 +1,4 @@
+class Solution {
 public:
     bool isPalindrome(int x) {
         int reverse = 0;
@@ -5,7 +6,8 @@ public:
             int rem = x % 10;
             reverse = (reverse*10) + rem;
             x/=10;
-        } return reverse == x;
+        } return reverse == original;
     }
+        if(x<0) return false;
+        int original = x;
 };
-class Solution {
