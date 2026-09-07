@@ -42,26 +42,21 @@ Follow up: Could you solve it without converting the integer to a string?
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 7.7 MB  
-**Submitted:** 2026-09-07T19:43:01.547Z  
+**Memory:** 7.8 MB  
+**Submitted:** 2026-09-07T19:44:24.049Z  
 
 ```cpp
-class Solution {
 public:
     bool isPalindrome(int x) {
         int reverse = 0;
         while(x!=0){
             int rem = x % 10;
             reverse = (reverse*10) + rem;
-        } return reverse;
             x/=10;
-        if(reverse == x){
-            return true;
-        } else {
-            return false;
-        }
+        } return reverse == x;
     }
 };
+class Solution {
 
 ```
 
