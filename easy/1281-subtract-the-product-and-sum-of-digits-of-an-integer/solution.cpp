@@ -7,7 +7,7 @@ public:
        while(n>0){
         int rem = n % 10;
         multiply *= rem;
-        add+= add;
+        add+= rem;
         n/=10;
        }
        return multiply - add; 
