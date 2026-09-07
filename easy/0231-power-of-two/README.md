@@ -43,14 +43,14 @@ Follow up: Could you solve it without loops/recursion?
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 7.7 MB  
-**Submitted:** 2026-09-07T19:05:54.520Z  
+**Memory:** 7.6 MB  
+**Submitted:** 2026-09-07T19:06:57.698Z  
 
 ```cpp
 class Solution {
 public:
     bool isPowerOfTwo(int n) {
-        if((n>0) && (n&(n-1)==0)){
+        if((n>0) && ((n&(n-1))==0)){
             return true;
         }else{
             return false;
