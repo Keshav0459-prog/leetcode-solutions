@@ -40,9 +40,9 @@ The character `'l'` at index 0 is the first character that does not occur at any
 ## Solution
 
 **Language:** C++  
-**Runtime:** 3 ms (beats 79.75%)  
-**Memory:** 14.6 MB (beats 86.61%)  
-**Submitted:** 2026-09-24T06:49:57.963Z  
+**Runtime:** 5 ms (beats 66.02%)  
+**Memory:** 14.7 MB (beats 71.02%)  
+**Submitted:** 2026-09-24T06:53:42.975Z  
 
 ```cpp
 class Solution {
