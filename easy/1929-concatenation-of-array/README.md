@@ -44,19 +44,18 @@ Explanation: The array ans is formed as follows:
 ## Solution
 
 **Language:** C++  
-**Runtime:** 3 ms (beats 10.26%)  
-**Memory:** 16.8 MB (beats 81.32%)  
-**Submitted:** 2026-10-06T18:49:00.748Z  
+**Runtime:** 1 ms (beats 19.35%)  
+**Memory:** 16.9 MB (beats 41.86%)  
+**Submitted:** 2026-10-06T18:51:31.648Z  
 
 ```cpp
 class Solution {
 public:
     vector<int> getConcatenation(vector<int>& nums) {
+        vector<int> ans = nums;
         int n = nums.size();
-        vector<int> ans(2*n);
         for(int i=0; i<n; i++){
-            ans[i] = nums[i];
-            ans[i+n] = nums[i];
+            ans.push_back(nums[i]);
         }
         return ans;
     }
